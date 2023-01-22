@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  mosquitto:
+    image: iegomez/mosquitto-go-auth:2.1.0-mosquitto_2.0.14
+    restart: always
+    ports:
+      - 1883:1883
+      - 9001:9001
+    volumes:
+      - ~/mosquitto/conf:/etc/mosquitto
